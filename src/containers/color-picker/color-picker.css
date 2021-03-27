@@ -76,6 +76,7 @@
 
 .color-picker__hue-range {
   -webkit-appearance: none;
+  height: 30px;
   width: 200px;
   background: transparent;
   padding: 0;
@@ -89,6 +90,7 @@
   width: 10px;
   margin-top: -1px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .color-picker__hue-range::-moz-range-thumb {
@@ -97,6 +99,7 @@
   height: 32px;
   width: 10px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .color-picker__hue-range::-ms-thumb {
@@ -105,6 +108,7 @@
   height: 32px;
   width: 10px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .color-picker__hue-range::-webkit-slider-runnable-track {

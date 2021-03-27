@@ -105,7 +105,6 @@ export default function ColorPicker({ obj, objIndex, setTableData }) {
   const fieldSaturationStyle = {
     background:  createSaturationGradientByHsl(hsl)
   };
-  console.log(fieldSaturationStyle);
 
   const setNewColorToTableData = newColorString => {
     setTableData(
