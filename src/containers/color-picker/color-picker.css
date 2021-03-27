@@ -1,0 +1,115 @@
+.color-picker {
+  position: relative;
+  display: inline;
+}
+
+.color-picker__pick {
+  height: 1.5em;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.color-picker__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 1;
+}
+
+.color-picker__overlay--active {
+  display: block;
+}
+
+.color-picker__menu {
+  position: absolute;
+  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  background-color: white;
+  z-index: 2;
+  display: none;
+  top: 100%;
+  right: 0;
+}
+
+.color-picker__menu--active {
+  display: flex;
+}
+
+.color-picker input[type=text] {
+  width: 55px;
+}
+
+.color-picker__field {
+  height: 100px;
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.color-picker__pointer {
+  pointer-events: none;
+  height: 6px;
+  width: 6px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: transparent;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+}
+
+.color-picker__hue-range {
+  -webkit-appearance: none;
+  width: 200px;
+  background: transparent;
+}
+
+.color-picker__hue-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 32px;
+  width: 10px;
+  margin-top: -1px;
+  cursor: pointer;
+}
+
+.color-picker__hue-range::-moz-range-thumb {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 32px;
+  width: 10px;
+  cursor: pointer;
+}
+
+.color-picker__hue-range::-ms-thumb {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 32px;
+  width: 10px;
+  cursor: pointer;
+}
+
+.color-picker__hue-range::-webkit-slider-runnable-track {
+  height: 30px;
+  cursor: pointer;
+  background: linear-gradient(to right, hsl(0, 100%, 50%) 0%, hsl(119, 100%, 50%) 33%, hsl(239, 100%, 50%) 67%, hsl(359, 100%, 50%) 100%);
+}
+
+.color-picker__hue-range::-moz-range-track {
+  height: 30px;
+  cursor: pointer;
+  background: linear-gradient(to right, hsl(0, 100%, 50%) 0%, hsl(119, 100%, 50%) 33%, hsl(239, 100%, 50%) 67%, hsl(359, 100%, 50%) 100%);
+}
+
+.color-picker__hue-range::-ms-track {
+  height: 30px;
+  cursor: pointer;
+  background: linear-gradient(to right, hsl(0, 100%, 50%) 0%, hsl(119, 100%, 50%) 33%, hsl(239, 100%, 50%) 67%, hsl(359, 100%, 50%) 100%);
+}

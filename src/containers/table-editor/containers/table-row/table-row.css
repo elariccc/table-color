@@ -1,0 +1,25 @@
+.table-row--dragged {
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+.table-row td {
+  transition: all 0.3s linear;
+  border: solid transparent 0em;
+}
+
+.table-row--dragged-over-top td {
+  border-top: solid 1.125em lightcyan;
+}
+
+.table-row--dragged-over-bottom td {
+  border-bottom: solid 1.125em lightcyan;
+}
+
+.table-row__drag-cell {
+  cursor: grab;
+}
+
+.table-row__delete-cell {
+  cursor: pointer;
+}
