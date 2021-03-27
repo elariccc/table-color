@@ -102,9 +102,10 @@ export default function ColorPicker({ obj, objIndex, setTableData }) {
     top: `${-(hsl.lightness + hsl.saturation / 2 - 100) / (1 - hsl.saturation / 200)}%`,
   };
 
-  const fieldStyle = {
-    background:  createFieldGradientByHue(hsl.hue)
+  const fieldSaturationStyle = {
+    background:  createSaturationGradientByHsl(hsl)
   };
+  console.log(fieldSaturationStyle);
 
   const setNewColorToTableData = newColorString => {
     setTableData(
@@ -184,13 +185,16 @@ export default function ColorPicker({ obj, objIndex, setTableData }) {
         />
         <div className={menuClasses}>
           <div 
-            className='color-picker__field'
-            style={fieldStyle}
+            className='color-picker__field-saturation'
+            style={fieldSaturationStyle}
             onMouseDown={handleFieldMouseDown}
             onMouseMove={handleFieldMouseMove}
             onMouseUp={handleFieldStopPicking}
             onMouseLeave={handleFieldStopPicking}
           >
+            <div
+              className='color-picker__field-lightness'
+            />
             <div 
               className='color-picker__pointer'
               style={pointerStyle}
@@ -263,9 +267,16 @@ export default function ColorPicker({ obj, objIndex, setTableData }) {
 
 const modes = ['Hex', 'RGB', 'sRGB'];
 
-function createFieldGradientByHue(hue) {
-  return `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
-          linear-gradient(to right, white, hsl(${Math.round(hue)}, 100%, 50%)`;
+function createSaturationGradientByHsl(hsl) {
+  const newHsl = {
+    ...hsl,
+    ...{
+      saturation: 100,
+      lightness: 50
+    }
+  };
+
+  return `linear-gradient(to right, #ffffff, ${createColorString(hslToRgb(newHsl))})`;
 }
 
 function createColorString(rgb, modeIndex = 0) {

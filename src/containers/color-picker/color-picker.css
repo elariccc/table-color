@@ -45,12 +45,22 @@
   width: 55px;
 }
 
-.color-picker__field {
+.color-picker__field-saturation {
   height: 100px;
   width: 200px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
+}
+
+.color-picker__field-lightness {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
 .color-picker__pointer {
@@ -68,6 +78,7 @@
   -webkit-appearance: none;
   width: 200px;
   background: transparent;
+  padding: 0;
 }
 
 .color-picker__hue-range::-webkit-slider-thumb {
@@ -112,4 +123,14 @@
   height: 30px;
   cursor: pointer;
   background: linear-gradient(to right, hsl(0, 100%, 50%) 0%, hsl(119, 100%, 50%) 33%, hsl(239, 100%, 50%) 67%, hsl(359, 100%, 50%) 100%);
+  color: transparent;
+  border-color: transparent;
+}
+
+.color-picker__hue-range::-ms-fill-lower {
+  background: transparent;
+}
+
+.color-picker__hue-range::-ms-fill-upper {
+  background: transparent;
 }
