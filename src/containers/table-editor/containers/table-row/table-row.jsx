@@ -86,26 +86,29 @@ export default function TableRow({ row, index, setTableData, draggedIndex, setDr
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
-      >drag</td>
+      ><i class="fas fa-grip-lines table-editor__icon"></i></td>
       <TableDataEditable
         obj={row}
         property='name'
         objIndex={index}
         setTableData={setTableData}
+        className='table-editor__data-name'
       />
       <TableDataEditable
         obj={row}
         property='type'
         objIndex={index}
         setTableData={setTableData}
+        className='table-editor__data-type'
       />
       <TableDataEditable
         obj={row}
         property='color'
         objIndex={index}
         setTableData={setTableData}
+        className='table-editor__data-color'
       />
-      <td>
+      <td className='table-row__color-picker'>
         <ColorPicker
           obj={row}
           objIndex={index}
@@ -115,7 +118,9 @@ export default function TableRow({ row, index, setTableData, draggedIndex, setDr
       <td
         onClick={handleDeleteClick}
         className='table-row__delete-cell'
-      >delete</td>
+      >
+        <i class="far fa-trash-alt table-editor__icon"></i>
+      </td>
     </tr>
   );
 }

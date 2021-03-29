@@ -9,15 +9,20 @@
 }
 
 .table-row--dragged-over-top td {
-  border-top: solid 1.125em lightcyan;
+  border-top: solid 1.5em rgba(255, 255, 255, 0.7);
 }
 
 .table-row--dragged-over-bottom td {
-  border-bottom: solid 1.125em lightcyan;
+  border-bottom: solid 1.5em rgba(255, 255, 255, 0.7);
 }
 
 .table-row__drag-cell {
   cursor: grab;
+}
+
+.table-row__color-picker {
+  width: 50px;
+  min-width: 1.5em;
 }
 
 .table-row__delete-cell {

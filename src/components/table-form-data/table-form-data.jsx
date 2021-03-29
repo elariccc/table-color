@@ -1,6 +1,6 @@
 import TableInput from '../table-input';
 
-export default function TableFormData({ obj, property, setObj, placeholder }) {
+export default function TableFormData({ obj, property, setObj, placeholder, className }) {
   const handeInputChange = event => {
     setObj(
       oldObj => {
@@ -16,6 +16,7 @@ export default function TableFormData({ obj, property, setObj, placeholder }) {
       value={obj[property]}
       handeInputChange={handeInputChange}
       placeholder={placeholder}
+      className={className}
     />
   );
 }

@@ -1,3 +1,36 @@
 .table-editor {
   border-spacing: 0;
+  text-align: center;
+  width: 70%;
+  min-width: 500px;
+  max-width: 1000px;
+}
+
+.table-editor td input {
+  width: calc(100% - 10px);
+}
+
+.table-editor__data-name {
+  min-width: 6em;
+}
+
+.table-editor__data-type {
+  min-width: 6em;
+}
+
+.table-editor__data-color {
+  min-width: 12em;
+}
+
+.table-editor__icon {
+  font-size: 1.5em;
+  margin: 0 0.25em;
+}
+
+.table-editor__icon:hover {
+  color: rgb(75, 75, 75);
+}
+
+.table-editor__icon:active {
+  color:rgb(115, 115, 115)
 }

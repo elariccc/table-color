@@ -257,6 +257,7 @@ export default function ColorPicker({ obj, objIndex, setTableData }) {
             type='button'
           >
             {modes[modeIndex]}
+            <i class="fas fa-sort"></i>
           </button>
         </div>
       </div>

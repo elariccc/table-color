@@ -1,4 +1,4 @@
-export default function TableInput({ value, handeInputChange, placeholder, type = 'text', step, min, max }) {
+export default function TableInput({ value, handeInputChange, placeholder, type = 'text', step, min, max, className }) {
   return (
     <td>
       <input 
@@ -9,6 +9,7 @@ export default function TableInput({ value, handeInputChange, placeholder, type 
         step={step}
         min={min}
         max={max}
+        className={className}
       />
     </td>
   );

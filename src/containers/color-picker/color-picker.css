@@ -1,11 +1,11 @@
 .color-picker {
   position: relative;
-  display: inline;
+  width: 100%;
 }
 
 .color-picker__pick {
   height: 1.5em;
-  width: 50px;
+  width: 100%;
   border: none;
   cursor: pointer;
 }
@@ -137,4 +137,13 @@
 
 .color-picker__hue-range::-ms-fill-upper {
   background: transparent;
+}
+
+.color-picker__mode {
+  width: 95%;
+  margin-bottom: 3px;
+}
+
+.color-picker__mode i {
+  float: right;
 }

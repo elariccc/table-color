@@ -37,23 +37,29 @@ export default function TableFormRow({ setTableData }) {
         property='name'
         setObj={setRow}
         placeholder='Type name...'
+        className='table-editor__data-name'
       />
       <TableFormData
         obj={row}
         property='type'
         setObj={setRow}
         placeholder='Type type...'
+        className='table-editor__data-type'
       />
       <TableFormData
         obj={row}
         property='color'
         setObj={setRow}
         placeholder='Type color...'
+        className='table-editor__data-color'
       />
-      <td
-        onClick={handleInsertClick}
-        className='table-form-row__insert-cell'
-      >insert</td>
+      <td/>
+      <td className='table-form-row__insert'>
+        <i 
+          onClick={handleInsertClick}
+          className="far fa-plus-square table-editor__icon"
+        ></i>
+      </td>
     </tr>
   );
 }
